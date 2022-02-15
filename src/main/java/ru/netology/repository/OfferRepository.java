@@ -29,4 +29,9 @@ public class OfferRepository {
     public TicketOffer[] findAll() {
         return items;
     }
+    public TicketOffer[] removeAll() {
+        TicketOffer[] result = new TicketOffer[0];
+        items = result;
+        return items;
+    }
 }

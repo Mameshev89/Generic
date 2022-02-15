@@ -1,6 +1,6 @@
 package ru.netology.domain;
 
-public class TicketOffer implements Comparable<TicketOffer>{
+public class TicketOffer implements Comparable<TicketOffer> {
     private int id;
     private int price;
     private String departure;
@@ -57,6 +57,6 @@ public class TicketOffer implements Comparable<TicketOffer>{
 
     @Override
     public int compareTo(TicketOffer o) {
-        return this.price-o.price;
+        return this.price - o.price;
     }
 }

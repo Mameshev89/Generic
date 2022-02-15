@@ -20,7 +20,7 @@ public class ManagerOfferTickets {
         TicketOffer[] result = new TicketOffer[0];
         for (TicketOffer item : repository.findAll()) {
             TicketOffer[] tmp = new TicketOffer[result.length + 1];
-            if (item.getDeparture().contains(from) && item.getArrive().contains(to)) {
+            if (item.getDeparture().contains(from) || item.getArrive().contains(to)) {
                 System.arraycopy(result, 0, tmp, 0, result.length);
                 tmp[tmp.length - 1] = item;
                 result = tmp;
@@ -38,4 +38,5 @@ public class ManagerOfferTickets {
     public void remove(int id) {
         repository.removeId(id);
     }
+
 }
